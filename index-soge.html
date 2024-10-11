@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄버거 메뉴 사이트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1 class="site-title">즐거운 여행</h1> <!-- 웹사이트 타이틀 추가 -->
+        <nav id="navMenu" class="nav-menu">
+            <ul>
+                <li><a href="#">즐거운 여행사 소개</a></li>
+                <li><a href="#">즐거운 여행을 위한 꿀팁</a></li>
+                <li><a href="#">여행을 위한 간단 영어</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>즐거운 여행사 소개</h1>
+        
+        <section>
+            <h2>우리의 이야기</h2>
+            <p>
+                즐거운 여행사는 여행을 사랑하는 사람들이 모여 설립한 여행 전문 회사입니다. 
+                2005년에 설립된 이래, 전 세계의 아름다운 여행지들을 소개하며, 고객님들이 잊지 못할 추억을 만들 수 있도록 돕고 있습니다. 
+                우리는 고객의 만족을 최우선으로 생각하며, 여행을 통해 더 많은 사람들이 새로운 경험을 쌓을 수 있도록 최선을 다하고 있습니다.
+            </p>
+        </section>
+    
+        <section>
+            <h2>설립 목적</h2>
+            <p>
+                우리의 목표는 사람들이 일상에서 벗어나 세상의 다양한 문화를 체험하고, 즐거움과 여유를 느낄 수 있는 기회를 제공하는 것입니다. 
+                우리는 믿을 수 있는 서비스와 맞춤형 여행 계획을 통해, 모든 고객들이 편안하고 안전한 여행을 할 수 있도록 지원합니다.
+            </p>
+        </section>
+    
+        <section>
+            <h2>주요 서비스</h2>
+            <ul>
+                <li>맞춤형 여행 일정 계획</li>
+                <li>항공권 및 숙박 예약 대행</li>
+                <li>전 세계 여행 가이드 서비스</li>
+                <li>여행자 보험 및 비자 상담</li>
+                <li>현지 투어 및 체험 프로그램 제공</li>
+            </ul>
+            <p>
+                저희는 고객님의 여행 스타일과 요구에 맞춘 다양한 서비스를 제공하며, 최적의 여행 경험을 선사합니다.
+            </p>
+        </section>
+    
+        <section>
+            <h2>연락처</h2>
+            <p>
+                더 궁금한 사항이 있으시면 언제든지 저희에게 연락해 주세요!
+            </p>
+            <ul>
+                <li>전화: 00-0000-0000</li>
+                <li>이메일: info@cokac.com</li>
+                <li>주소: 서울특별시 강남구 여행로 123</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>푸터 영역입니다.</p>
+    </footer>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        // 햄버거 메뉴 클릭 시 메뉴 열리고 닫힘
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // 바깥쪽 클릭 시 메뉴 닫힘
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

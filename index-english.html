@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄버거 메뉴 사이트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1 class="site-title">즐거운 여행</h1> <!-- 웹사이트 타이틀 추가 -->
+        <nav id="navMenu" class="nav-menu">
+            <ul>
+                <li><a href="#">즐거운 여행사 소개</a></li>
+                <li><a href="#">즐거운 여행을 위한 꿀팁</a></li>
+                <li><a href="#">여행을 위한 간단 영어</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>여행을 위한 간단 영어</h1>
+    
+        <section>
+            <h2>1. 공항에서 사용되는 영어 표현</h2>
+            <p>공항에서 자주 사용하는 기본 영어 표현입니다.</p>
+            <ul>
+                <li>"Where is the check-in counter?" (체크인 카운터는 어디에 있나요?)</li>
+                <li>"Can I have my boarding pass, please?" (탑승권을 주시겠어요?)</li>
+                <li>"What time does the flight depart?" (비행기가 몇 시에 출발하나요?)</li>
+                <li>"Where is the baggage claim?" (수하물 찾는 곳은 어디인가요?)</li>
+                <li>"Is this the right gate for the flight to New York?" (뉴욕행 비행기는 이 탑승구가 맞나요?)</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>2. 호텔에서 사용되는 영어 표현</h2>
+            <p>호텔에서 체크인 및 기타 상황에서 유용한 표현입니다.</p>
+            <ul>
+                <li>"I have a reservation under the name of [이름]." (제 이름으로 예약했어요.)</li>
+                <li>"Can I get a room with a view?" (전망이 좋은 방을 주시겠어요?)</li>
+                <li>"What time is check-out?" (체크아웃 시간은 몇 시인가요?)</li>
+                <li>"Can I have extra towels, please?" (수건을 추가로 주시겠어요?)</li>
+                <li>"Is breakfast included?" (조식이 포함되어 있나요?)</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>3. 음식 주문 시 유용한 영어 표현</h2>
+            <p>음식점에서 주문할 때 필요한 간단한 표현들입니다.</p>
+            <ul>
+                <li>"Can I see the menu, please?" (메뉴판을 볼 수 있을까요?)</li>
+                <li>"What do you recommend?" (추천 메뉴가 무엇인가요?)</li>
+                <li>"I'll have the [음식 이름], please." ([음식 이름]을 주세요.)</li>
+                <li>"Can I get this to-go?" (이거 포장해 주시겠어요?)</li>
+                <li>"Could I have the bill, please?" (계산서를 주시겠어요?)</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>4. 길을 찾을 때 유용한 영어 표현</h2>
+            <p>길을 물어보거나 교통 수단을 이용할 때 유용한 표현입니다.</p>
+            <ul>
+                <li>"Excuse me, where is the nearest subway station?" (실례합니다, 가장 가까운 지하철역은 어디인가요?)</li>
+                <li>"How do I get to [장소]?" ([장소]에 어떻게 가나요?)</li>
+                <li>"Is this the right bus to [장소]?" ([장소]로 가는 버스가 맞나요?)</li>
+                <li>"Can you show me on the map?" (지도에서 보여주실 수 있나요?)</li>
+                <li>"How much is the fare?" (요금이 얼마인가요?)</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>5. 응급 상황에서 유용한 영어 표현</h2>
+            <p>응급 상황에서 사용할 수 있는 표현들입니다.</p>
+            <ul>
+                <li>"I need help!" (도움이 필요해요!)</li>
+                <li>"Call the police, please." (경찰을 불러주세요.)</li>
+                <li>"I lost my passport." (여권을 잃어버렸어요.)</li>
+                <li>"Is there a hospital nearby?" (근처에 병원이 있나요?)</li>
+                <li>"I don't feel well." (몸이 좋지 않아요.)</li>
+            </ul>
+        </section>
+    
+    </main>
+    
+    <footer>
+        <p>푸터 영역입니다.</p>
+    </footer>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        // 햄버거 메뉴 클릭 시 메뉴 열리고 닫힘
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // 바깥쪽 클릭 시 메뉴 닫힘
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

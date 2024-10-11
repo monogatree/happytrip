@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄버거 메뉴 사이트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1 class="site-title">즐거운 여행</h1> <!-- 웹사이트 타이틀 추가 -->
+        <nav id="navMenu" class="nav-menu">
+            <ul>
+                <li><a href="#">즐거운 여행사 소개</a></li>
+                <li><a href="#">즐거운 여행을 위한 꿀팁</a></li>
+                <li><a href="#">여행을 위한 간단 영어</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>즐거운 여행을 위한 꿀팁</h1>
+        
+        <section>
+            <h2>1. 철저한 여행 준비</h2>
+            <p>
+                여행을 즐겁게 시작하기 위해서는 철저한 준비가 필수입니다. 출발 전에 미리 준비할 것들을 체크하는 것이 중요합니다.
+            </p>
+            <ul>
+                <li>여권, 비자 등 필수 서류를 미리 확인하세요.</li>
+                <li>여행 가방은 목적지의 날씨와 활동에 맞게 준비하세요.</li>
+                <li>필요한 물품은 사전에 쇼핑 리스트를 만들어 체크하세요.</li>
+                <li>여행자 보험에 가입하여 만일의 사태에 대비하세요.</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>2. 경비 계획 세우기</h2>
+            <p>
+                여행에서 중요한 부분 중 하나는 예산 관리입니다. 즐거운 여행을 위해 경비 계획을 세우는 것이 좋습니다.
+            </p>
+            <ul>
+                <li>식비, 교통비, 숙박비 등을 포함한 총 예산을 미리 계산하세요.</li>
+                <li>사용할 통화에 대한 환율 정보를 확인하고 필요한 만큼 환전하세요.</li>
+                <li>현지에서 사용할 수 있는 결제 수단(카드, 현금)을 준비하세요.</li>
+                <li>예상치 못한 지출을 대비해 여유 자금을 확보하세요.</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>3. 현지 문화를 존중하세요</h2>
+            <p>
+                여행 중에는 현지 문화를 존중하는 것이 중요합니다. 각 나라의 법과 예의를 지키며, 새로운 문화를 배우는 자세로 임하세요.
+            </p>
+            <ul>
+                <li>현지의 언어로 기본적인 인사말을 배우세요. (예: "안녕하세요", "감사합니다")</li>
+                <li>사진 촬영 시 현지인의 동의를 구하는 것이 예의입니다.</li>
+                <li>종교적 장소나 전통적인 장소에서는 복장을 신경 쓰세요.</li>
+                <li>현지에서 금기시되는 행동이나 말투를 미리 알아두세요.</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>4. 건강 관리</h2>
+            <p>
+                여행 중 건강을 유지하는 것은 아주 중요합니다. 장거리 여행에서는 특히 체력을 잘 관리해야 하며, 현지 음식이나 물에 주의하세요.
+            </p>
+            <ul>
+                <li>장거리 비행 시 자주 스트레칭하고 수분을 충분히 섭취하세요.</li>
+                <li>현지에서 생수를 마시고, 음식 위생을 확인하세요.</li>
+                <li>비상 약품(소화제, 진통제 등)을 준비해 주세요.</li>
+                <li>시간대가 다른 지역으로 여행할 경우 충분한 휴식을 취하세요.</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>5. 여행 중 즐기는 팁</h2>
+            <p>
+                여행 중에는 계획한 일정을 잘 소화하는 것도 중요하지만, 예상치 못한 일정을 추가하거나 즉흥적으로 즐기는 것도 큰 재미입니다.
+            </p>
+            <ul>
+                <li>유명 관광지 외에도 숨겨진 명소를 탐방해보세요.</li>
+                <li>현지인들과 대화를 나누고 그들의 추천 장소를 방문해보세요.</li>
+                <li>휴식을 충분히 취하며, 일정에 여유를 두세요.</li>
+                <li>사진이나 영상을 찍으며 여행의 추억을 기록하세요.</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>푸터 영역입니다.</p>
+    </footer>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        // 햄버거 메뉴 클릭 시 메뉴 열리고 닫힘
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // 바깥쪽 클릭 시 메뉴 닫힘
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즐거운 여행 - 홈</title>
+    <style>
+        /* 기본 스타일 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            height: 25px;
+            justify-content: space-between;
+        }
+
+        .hamburger-menu .bar {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+        }
+
+        .site-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* 네비게이션 메뉴 기본 설정 (처음에는 보이지 않음) */
+        .nav-menu {
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            background-color: rgba(51, 51, 51, 0.9);
+            width: 100%;
+            display: none;  /* 처음에 숨김 */
+            flex-direction: column;
+            z-index: 1000; /* 추가된 z-index */
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-menu ul li {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* active 클래스가 추가되면 메뉴가 보이도록 설정 */
+        .nav-menu.active {
+            display: flex;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* 히어로 섹션 스타일 */
+        .hero {
+            background-image: url('hero-image.jpg'); /* 배경 이미지 URL 수정 */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #f1c40f;
+            color: #333;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e1b50e;
+        }
+
+        /* 서비스 섹션 스타일 */
+        .services {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+
+        .services h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            text-align: center;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1 class="site-title">즐거운 여행</h1>
+        <nav id="navMenu" class="nav-menu">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">즐거운 여행사 소개</a></li>
+                <li><a href="#">즐거운 여행을 위한 꿀팁</a></li>
+                <li><a href="#">여행을 위한 간단 영어</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>당신의 꿈의 여행, 지금 시작하세요!</h2>
+                <p>즐거운 여행사와 함께라면 어디든지 특별한 여행이 됩니다.</p>
+                <a href="#" class="cta-button">지금 예약하기</a>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2>우리의 서비스</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>맞춤형 여행 계획</h3>
+                    <p>여러분의 여행 스타일에 맞춘 개인 맞춤형 여행 일정을 제공합니다.</p>
+                </div>
+                <div class="card">
+                    <h3>항공권 및 숙박 예약</h3>
+                    <p>전 세계 어디든 항공권과 숙박을 편리하게 예약하세요.</p>
+                </div>
+                <div class="card">
+                    <h3>현지 투어 프로그램</h3>
+                    <p>현지의 문화와 명소를 깊이 있게 탐방할 수 있는 투어를 제공합니다.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 즐거운 여행사. 모든 권리 보유.</p>
+    </footer>
+
+    <!-- 스크립트를 body 끝에 배치하여 DOM 로드 후 실행되도록 설정 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const navMenu = document.getElementById('navMenu');
+
+            // 햄버거 메뉴 클릭 시 navMenu에 active 클래스 토글
+            hamburgerMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            // 페이지의 다른 부분 클릭 시 메뉴 닫힘
+            document.addEventListener('click', (event) => {
+                if (!navMenu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
